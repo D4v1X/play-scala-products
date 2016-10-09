@@ -1,0 +1,7 @@
+@()(implicit messages: Messages)
+@import play.Configuration
+<footer>
+    lang = @messages.lang.code,
+    secret = @Configuration.root().getString("play.crypto.secret"),
+    date = @(new java.util.Date().format("yyyy-MM-dd HH:mm"))
+</footer>
